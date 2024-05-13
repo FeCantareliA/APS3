@@ -19,13 +19,12 @@ public class PessoaDAO {
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
         try {
-            stmt=con.prepareStatement("INSERT INTO pessoa(descricao,email,cargo,departamento,usuario,senha) VALUES (?,?,?,?,?,?);");
-            stmt.setString(1,p.getDescricao());
+            stmt=con.prepareStatement("INSERT INTO pessoa(nome,email,cargo,departamento,senha) VALUES (?,?,?,?,?);");
+            stmt.setString(1, p.getNome());
             stmt.setString(2, p.getEmail());
             stmt.setString(3, p.getCargo());
             stmt.setString(4, p.getDepartamento());
-            stmt.setString(5, p.getUsuario());
-            stmt.setString(6, p.getSenha());
+            stmt.setString(5, p.getSenha());
             
             stmt.executeUpdate();
             

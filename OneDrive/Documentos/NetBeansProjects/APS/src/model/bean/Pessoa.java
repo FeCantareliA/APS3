@@ -10,21 +10,22 @@ package model.bean;
  */
 public class Pessoa {
     private int id;
-    private String descricao;
+    private String nome;
     private String email;
     private String cargo;
     private String departamento;
-    private String usuario;
     private String senha;
 
-    public String getUsuario() {
-        return usuario;
+    
+    
+    public String getNome() {
+        return nome;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-
+    
     public String getSenha() {
         return senha;
     }
@@ -41,13 +42,7 @@ public class Pessoa {
         this.id = id;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
 
     public String getEmail() {
         return email;

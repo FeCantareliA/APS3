@@ -143,11 +143,9 @@ public class viewPessoa extends javax.swing.JFrame {
     private void btnCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadActionPerformed
         Pessoa p = new Pessoa();
         PessoaDAO dao= new PessoaDAO();
-        p.setDescricao(cadDesc.getText());
         p.setEmail(cadEmail.getText());
         p.setCargo(cadCargo.getText());
-        p.setDepartamento(cadDepart.getText());
-        p.setUsuario(cadUser.getText());     
+        p.setDepartamento(cadDepart.getText());    
         p.setSenha(cadPass.getText());
         dao.create(p);
                 
